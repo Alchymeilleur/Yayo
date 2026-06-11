@@ -1,0 +1,19 @@
+{
+  "name": "yayo-rental-platform",
+  "version": "0.1.0",
+  "description": "Yayo - Modern rental platform for Republic of Congo",
+  "private": true,
+  "workspaces": [
+    "frontend",
+    "backend"
+  ],
+  "scripts": {
+    "dev": "concurrently \"yarn workspace backend dev\" \"yarn workspace frontend dev\"",
+    "build": "yarn workspace backend build && yarn workspace frontend build",
+    "start": "yarn workspace backend start",
+    "test": "yarn workspace backend test && yarn workspace frontend test"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
